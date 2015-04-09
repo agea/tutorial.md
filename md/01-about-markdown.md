@@ -1,6 +1,3 @@
-What is Markdown?
------------------
-
 Markdown is a markup language with plain text formatting 
 syntax designed so that it can mantain readability without 
 any conversion or converted to **HTML**, **PDF** and many 

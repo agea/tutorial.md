@@ -1,3 +1,9 @@
 textarea {
   font-family: monospace;
 }
+
+
+h2, .dropdown-menu a {
+text-transform: capitalize;
+}
+

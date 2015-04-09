@@ -1,6 +1,3 @@
-Links
------
-
  - You can insert links in text like 
  [this](http://agea.github.io/tutorial.md)
 
@@ -21,6 +18,15 @@ Links
  reference if it matches the link text
  (example:  [tutorial.md][])
  
+ - You may also write directly the link: 
+ <http://agea.github.io/tutorial.md>
+ 
+ - It will work also for email addresses: 
+ <email@example.com> (you may write vaild email 
+ links also using [mailto](mailto:email@example.com) 
+ as protocol)
+ 
+ 
 
-[tutorial.md]:(http://agea.github.io/tutorial.md)
+[tutorial.md]: http://agea.github.io/tutorial.md
 

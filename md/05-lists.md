@@ -1,5 +1,3 @@
-Lists
- 
    * apples
    * oranges
    * pears

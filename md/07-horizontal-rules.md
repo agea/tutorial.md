@@ -1,0 +1,18 @@
+you can use horizontal rules to separate paragraphs
+you may use three or more *
+******
+or three or more _ (you may insert spaces before, 
+after or between the charachters)
+__ __ __ __ 
+
+or three (or more) -
+
+---
+
+but you have to be careful as it is similar to the 
+header syntax, so if you write --- immediatly after 
+a single line of text you get an header, either you 
+have to leave a blank line before the ---, or you put
+it after multiple lines of text
+
+

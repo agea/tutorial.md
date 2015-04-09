@@ -17,14 +17,36 @@
   <link href="css/app.css" rel="stylesheet">
 </head>
 
-<body>
+<body ng-controller="TutorialController as tc">
 
-  <div class="container" ng-controller="TutorialController as tc">
+  <nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+
+          <a href="#" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tutorial.md 
+              <span class="caret"></span>
+        </a>
+          <ul class="dropdown-menu" role="menu">
+            <li ng-repeat="c in tc.chapters">
+              <a ng-href="#{{c}}" ng-bind="c.split('-').slice(1).join(' ')"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+
+    </div>
+  </nav>
+
+  <div class="container">
     <div ng-repeat="c in tc.chapters">
-      <a name="{{c}}"></a>
+      <a class="chapter-anchor" name="{{c}}">&nbsp;</a>
       <hr>
       <div class="row">
         <div class="col-sm-6">
+          <h2 ng-bind="c.split('-').slice(1).join(' ')"></h2>
           <div ng-bind-html="tc.md(tc[c])"></div>
         </div>
         <div class="col-sm-6">

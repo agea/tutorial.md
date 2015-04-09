@@ -6,11 +6,14 @@ angular.module('tutorial', ['ngSanitize'])
 
     _this.chapters = [
       '00-intro',
-      '01-what',
-      '02-basics',
+      '01-about-markdown',
+      '02-basic-styles',
       '03-links',
-      '04-lists',
-      '05-headers',
+      '04-images',
+      '05-lists',
+      '06-headers',
+      '07-horizontal-rules',
+      '97-html',
       '98-entities',
       '99-escapes'];
         
