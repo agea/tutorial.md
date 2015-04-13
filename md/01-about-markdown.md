@@ -1,9 +1,10 @@
-Markdown is a markup language with plain text formatting 
-syntax designed so that it can mantain readability without 
-any conversion or converted to **HTML**, **PDF** and many 
-other formats. 
-
-Markdown also helps you to give structure to documents
+Markdown is a markup language designed to be simple 
+enough to be easy to learn and maintain source 
+readability
 
 You can see [Wikipedia](http://en.wikipedia.org/wiki/Markdown)
 if you want a better explanation of Markdown.
+
+There are several Markdown *flavours*, this tutorial is 
+based on the [Commonmark](http://commonmark.org) 
+specification.

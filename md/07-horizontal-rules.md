@@ -1,11 +1,12 @@
-you can use horizontal rules to separate paragraphs
+You can use horizontal rules to separate paragraphs
 you may use three or more *
 ******
 or three or more _ (you may insert spaces before, 
-after or between the charachters)
+after or between the characters, no other 
+charachters are allowed)
 __ __ __ __ 
 
-or three (or more) -
+or three (or more) - 
 
 ---
 

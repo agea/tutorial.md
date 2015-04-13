@@ -13,9 +13,11 @@ angular.module('tutorial', ['ngSanitize'])
       '05-lists',
       '06-headers',
       '07-horizontal-rules',
-      '97-html',
-      '98-entities',
-      '99-escapes'];
+      '08-code',
+      '09-blockquotes',
+      '10-html',
+      '11-entities',
+      '12-escapes'];
         
     angular.forEach(_this.chapters, function(chapter){
        $http.get('md/'+chapter+'.md').success(function(data){
