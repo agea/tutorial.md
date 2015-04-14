@@ -6,7 +6,8 @@
  to your link (can you see the tooltip?):
 
  - If your link contains spaces you have to write
- the link in [this](<http://example.com/a space>) way
+ the [link](<http://example.com/a space>)
+ between `<>`
  
  - You can use spaces and markup inside the
  [link **text**](http://agea.github.io/tutorial.md)

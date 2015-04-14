@@ -1,4 +1,5 @@
-Syntax for images is like the syntax for links:
+Syntax for images is like the syntax for links, 
+but with a `!` before:
 
 ![alt text](http://lorempixel.com/100/100 "image title")
 ![](http://lorempixel.com/100/100?1)

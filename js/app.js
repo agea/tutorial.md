@@ -6,27 +6,28 @@ angular.module('tutorial', ['ngSanitize'])
 
     _this.chapters = [
       '00-intro',
-      '01-about-markdown',
-      '02-basic-styles',
-      '03-links',
-      '04-images',
-      '05-lists',
-      '06-headers',
-      '07-horizontal-rules',
-      '08-code',
-      '09-blockquotes',
-      '10-html',
-      '11-entities',
-      '12-escapes'];
-        
-    angular.forEach(_this.chapters, function(chapter){
-       $http.get('md/'+chapter+'.md').success(function(data){
-          _this[chapter] = data;
-       });
+      '01-basic-styles',
+      '02-links',
+      '03-images',
+      '04-lists',
+      '05-headers',
+      '06-horizontal-rules',
+      '07-code',
+      '08-blockquotes',
+      '09-html',
+      '10-entities',
+      '11-escapes',
+      '12-about'
+      ];
+
+    angular.forEach(_this.chapters, function (chapter) {
+      $http.get('md/' + chapter + '.md').success(function (data) {
+        _this[chapter] = data;
+      });
     });
-    
+
     _this.md = function (md) {
-      if (md){
+      if (md) {
         return writer.render(reader.parse(md));
       }
     }

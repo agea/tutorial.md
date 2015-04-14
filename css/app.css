@@ -1,9 +1,21 @@
-textarea {
-  font-family: monospace;
+body {
+  font-family: 'Source Sans', sans-serif;
 }
 
-
-h2, .dropdown-menu a {
-text-transform: capitalize;
+textarea,
+code {
+  font-family: 'Source Code Pro', monospace;
 }
 
+h2,
+.dropdown-menu a {
+  text-transform: capitalize;
+}
+
+.navbar-brand {
+  font-size: 24px;
+}
+
+.navbar {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
+}

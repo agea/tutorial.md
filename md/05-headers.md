@@ -6,7 +6,7 @@ The biggest possible header
 
 # You can also use this markup
 
-(I prefer the first one as is more readable when 
+(I prefer the first one as it's more readable when 
 looking directly at the source code, but the two 
 formats give the same results)
  
