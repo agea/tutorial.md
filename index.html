@@ -11,9 +11,20 @@
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
   <script src="bower_components/commonmark/dist/commonmark.js"></script>
+
+  <script src="bower_components/ace-builds/src-min/ace.js"></script>
+  <script src="bower_components/ace-builds/src-min/mode-markdown.js"></script>
+  <script src="bower_components/ace-builds/src-min/theme-terminal.js"></script>
+
+  <script src="bower_components/angular-ui-ace/ui-ace.min.js"></script>
+
   <script src="js/app.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400' rel='stylesheet' type='text/css'>
+
   <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  
   <link href="css/app.css" rel="stylesheet">
 </head>
 
@@ -45,12 +56,18 @@
       <a class="chapter-anchor" name="{{c}}">&nbsp;</a>
       <hr>
       <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
           <h2 ng-bind="c.split('-').slice(1).join(' ')"></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
           <div ng-bind-html="tc.md(tc[c])"></div>
         </div>
         <div class="col-sm-6">
-          <textarea class="form-control" rows="{{tc[c].split('\n').length}}" ng-model="tc[c]"></textarea>
+          <div ui-ace="{{tc.aceOptions}}" 
+               style="height: {{tc[c].split('\n').length*16}}px"
+               ng-model="tc[c]"></div>
         </div>
       </div>
     </div>

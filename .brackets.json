@@ -1,0 +1,5 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/agea/git/tutorial.md/bower_components/ace-builds/src/worker-xquery.js"
+    ]
+}

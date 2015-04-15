@@ -15,5 +15,3 @@ header syntax, so if you write --- immediatly after
 a single line of text you get an header, either you 
 have to leave a blank line before the ---, or you put
 it after multiple lines of text
-
-

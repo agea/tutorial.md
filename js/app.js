@@ -1,4 +1,4 @@
-angular.module('tutorial', ['ngSanitize'])
+angular.module('tutorial', ['ngSanitize', 'ui.ace'])
   .controller('TutorialController', ['$http', function ($http) {
     var _this = this;
     var writer = new commonmark.HtmlRenderer();
@@ -25,6 +25,14 @@ angular.module('tutorial', ['ngSanitize'])
         _this[chapter] = data;
       });
     });
+    
+    _this.aceOptions = {
+      useWrapMode: true,
+      showGutter: false,
+      theme: 'terminal',
+      mode: 'markdown'
+    };
+
 
     _this.md = function (md) {
       if (md) {

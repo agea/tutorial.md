@@ -11,4 +11,7 @@ You may want to read the full
 The source code for this tutorial is on 
 [Github](https://github.com/agea/tutorial.md)
 
+License
+-------
 
+MIT - [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
