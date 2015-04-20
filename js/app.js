@@ -25,14 +25,20 @@ angular.module('tutorial', ['ngSanitize', 'ui.ace'])
         _this[chapter] = data;
       });
     });
-    
-    _this.aceOptions = {
-      useWrapMode: true,
-      showGutter: false,
-      theme: 'terminal',
-      mode: 'markdown'
-    };
 
+    _this.onAceLoad = function (editor) {
+      editor.$blockScrolling = Infinity;
+      editor.setOptions({
+        wrap:'free',
+        maxLines: Infinity,
+        showGutter: false,
+        theme: 'ace/theme/twilight',
+        mode: 'ace/mode/markdown'
+      });
+      editor.setHighlightActiveLine(false);
+      editor.setFontSize(14);
+      editor.session.setOptions({});
+    }
 
     _this.md = function (md) {
       if (md) {

@@ -1,17 +1,11 @@
-You can see [Wikipedia](http://en.wikipedia.org/wiki/Markdown)
-if you want a better explanation of Markdown.
+You can see [Wikipedia](http://en.wikipedia.org/wiki/Markdown) if you want a better explanation of Markdown.
 
-There are several Markdown *flavours*, this tutorial is 
-based on the [Commonmark](http://commonmark.org) 
-specification.
+There are several Markdown *flavours*, this tutorial is based on the [Commonmark](http://commonmark.org) specification.
 
-You may want to read the full 
-[Commonmark specification](http://spec.commonmark.org/)
+You may want to read the full [Commonmark specification](http://spec.commonmark.org/)
 
-The source code for this tutorial is on 
-[Github](https://github.com/agea/tutorial.md)
+The source code for this tutorial is on [Github](https://github.com/agea/tutorial.md)
 
-License
--------
+### License
 
-MIT - [http://www.opensource.org/licenses/mit-license.php](http://www.opensource.org/licenses/mit-license.php)
+MIT - <http://www.opensource.org/licenses/mit-license.php>

@@ -1,7 +1,4 @@
-If you have to write something that would result in 
-a Markdown vaild syntax, you can escape the first 
-character of your expression (you may also escape 
-any other punctuation character) with a `\`
+If you have to write something that would result in a Markdown vaild syntax, you can escape the first character of your expression (you may also escape any other punctuation character) with a `\`
 
 \*not emphasized\*
 

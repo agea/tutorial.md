@@ -1,8 +1,9 @@
-Syntax for images is like the syntax for links, 
-but with a `!` before:
+Syntax for images is like the syntax for links, but with a `!` before:
 
-![alt text](http://lorempixel.com/100/100 "image title")
-![](http://lorempixel.com/100/100?1)
+![alt text](img/1.png "image title")
+
+![](img/2.png)
+
 ![ref]
 
-[ref]: http://lorempixel.com/100/100?2
+[ref]: img/3.png
