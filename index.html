@@ -16,7 +16,7 @@
 
   <script src="bower_components/ace-builds/src-min/ace.js"></script>
   <script src="bower_components/ace-builds/src-min/mode-markdown.js"></script>
-  <script src="bower_components/ace-builds/src-min/theme-terminal.js"></script>
+  <script src="bower_components/ace-builds/src-min/theme-twilight.js"></script>
 
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
@@ -47,25 +47,15 @@
             <li ng-repeat="t in tc.titles">
               <a ng-href="#{{t}}" ng-bind="t"></a>
             </li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-            <img ng-src="img/flags/{{tc.availableLanguages[tc.lang].img}}">
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li ng-repeat="lang in tc.availableLanguages">
-              <a href="javascript:void(0)" ng-click="tc.setLang(lang.code)">
+            <li class="divider"></li>
+            <li ng-repeat="(code,lang) in tc.otherLanguages()">
+              <a href="javascript:void(0)" ng-click="tc.setLang(code)">
                 <img ng-src="img/flags/{{lang.img}}"> {{lang.name}}
               </a>
             </li>
           </ul>
         </li>
       </ul>
-
 
     </div>
   </nav>

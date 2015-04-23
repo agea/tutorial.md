@@ -17,11 +17,24 @@ angular.module('tutorial', ['ngSanitize', 'ui.ace'])
     
     
     _this.availableLanguages = {
-      en: {name:'English', img:'gb.gif', code:'en'}, 
-      it: {name:'Italian', img:'it.png', code:'it'}
+      en: {name:'English', img:'gb.gif'}, 
+      it: {name:'Italian', img:'it.png'}
     };
 
+    _this.otherLanguages=function(){
+      var r = {};
+      for (var code in _this.availableLanguages){
+        if (code!=_this.lang){
+          r[code] = _this.availableLanguages[code];
+        }
+      }
+      return r;
+    }
+    
     _this.setLang = function (lang) {
+      
+      console.log(lang);
+      
       _this.lang = lang || window.navigator.userLanguage || window.navigator.language;
       
       if (!_this.availableLanguages[_this.lang]) {
