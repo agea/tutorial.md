@@ -4,32 +4,46 @@ angular.module('tutorial', ['ngSanitize', 'ui.ace'])
     var writer = new commonmark.HtmlRenderer();
     var reader = new commonmark.Parser();
 
-    _this.chapters = [
-      '00-intro',
-      '01-basic-styles',
-      '02-links',
-      '03-images',
-      '04-lists',
-      '05-headers',
-      '06-horizontal-rules',
-      '07-code',
-      '08-blockquotes',
-      '09-html',
-      '10-entities',
-      '11-escapes',
-      '12-about'
-      ];
+    _this.chapters = [];
+        
+    for (var i = 0; i<13; i++){
+      var s = ""+i;
+      if (s.length==1){
+        s="0"+s;
+      }
+      _this.chapters.push(s);
+    }
+    
+    
+    
+    _this.availableLanguages = {
+      en: {name:'English', img:'gb.gif', code:'en'}, 
+      it: {name:'Italian', img:'it.png', code:'it'}
+    };
 
-    angular.forEach(_this.chapters, function (chapter) {
-      $http.get('md/' + chapter + '.md').success(function (data) {
-        _this[chapter] = data;
+    _this.setLang = function (lang) {
+      _this.lang = lang || window.navigator.userLanguage || window.navigator.language;
+      
+      if (!_this.availableLanguages[_this.lang]) {
+        _this.lang = 'en';
+      }
+      
+      _this.titles = [];
+      angular.forEach(_this.chapters, function (chapter) {
+        $http.get('md/' + _this.lang + '/' + chapter + '.md').success(function (data) {
+          _this[chapter] = data;
+          _this.titles.push(data.split('\n')[0]);
+        });
       });
-    });
+
+    }
+
+    _this.setLang();
 
     _this.onAceLoad = function (editor) {
       editor.$blockScrolling = Infinity;
       editor.setOptions({
-        wrap:'free',
+        wrap: 'free',
         maxLines: Infinity,
         showGutter: false,
         theme: 'ace/theme/twilight',

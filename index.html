@@ -9,9 +9,9 @@
   <title>Tutorial.md</title>
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  
+
   <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-  
+
   <script src="bower_components/commonmark/dist/commonmark.js"></script>
 
   <script src="bower_components/ace-builds/src-min/ace.js"></script>
@@ -44,8 +44,23 @@
               <span class="caret"></span>
         </a>
           <ul class="dropdown-menu" role="menu">
-            <li ng-repeat="c in tc.chapters">
-              <a ng-href="#{{c}}" ng-bind="c.split('-').slice(1).join(' ')"></a>
+            <li ng-repeat="t in tc.titles">
+              <a ng-href="#{{t}}" ng-bind="t"></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="navbar-brand dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <img ng-src="img/flags/{{tc.availableLanguages[tc.lang].img}}">
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li ng-repeat="lang in tc.availableLanguages">
+              <a href="javascript:void(0)" ng-click="tc.setLang(lang.code)">
+                <img ng-src="img/flags/{{lang.img}}"> {{lang.name}}
+              </a>
             </li>
           </ul>
         </li>
@@ -57,13 +72,8 @@
 
   <div class="container">
     <div ng-repeat="c in tc.chapters">
-      <a class="chapter-anchor" name="{{c}}">&nbsp;</a>
+      <a class="chapter-anchor" name="{{tc.titles[$index]}}">&nbsp;</a>
       <hr>
-      <div class="row">
-        <div class="col-sm-12">
-          <h2 ng-bind="c.split('-').slice(1).join(' ')"></h2>
-        </div>
-      </div>
       <div class="row">
         <div class="col-sm-6">
           <div class="rendered" ng-bind-html="tc.md(tc[c])"></div>
