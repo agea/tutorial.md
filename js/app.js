@@ -5,42 +5,46 @@ angular.module('tutorial', ['ngSanitize', 'ui.ace'])
     var reader = new commonmark.Parser();
 
     _this.chapters = [];
-        
-    for (var i = 0; i<13; i++){
-      var s = ""+i;
-      if (s.length==1){
-        s="0"+s;
+
+    for (var i = 0; i < 13; i++) {
+      var s = "" + i;
+      if (s.length == 1) {
+        s = "0" + s;
       }
       _this.chapters.push(s);
     }
-    
-    
-    
+
     _this.availableLanguages = {
-      en: {name:'English', img:'gb.gif'}, 
-      it: {name:'Italian', img:'it.png'}
+      en: {
+        name: 'English',
+        img: 'gb.gif'
+      },
+      it: {
+        name: 'Italian',
+        img: 'it.png'
+      }
     };
 
-    _this.otherLanguages=function(){
+    _this.otherLanguages = function () {
       var r = {};
-      for (var code in _this.availableLanguages){
-        if (code!=_this.lang){
+      for (var code in _this.availableLanguages) {
+        if (code != _this.lang) {
           r[code] = _this.availableLanguages[code];
         }
       }
       return r;
     }
-    
+
     _this.setLang = function (lang) {
-      
+
       console.log(lang);
-      
+
       _this.lang = lang || window.navigator.userLanguage || window.navigator.language;
-      
+
       if (!_this.availableLanguages[_this.lang]) {
         _this.lang = 'en';
       }
-      
+
       _this.titles = [];
       angular.forEach(_this.chapters, function (chapter) {
         $http.get('md/' + _this.lang + '/' + chapter + '.md').success(function (data) {
@@ -64,7 +68,6 @@ angular.module('tutorial', ['ngSanitize', 'ui.ace'])
       });
       editor.setHighlightActiveLine(false);
       editor.setFontSize(14);
-      editor.session.setOptions({});
     }
 
     _this.md = function (md) {
