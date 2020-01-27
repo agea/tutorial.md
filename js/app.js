@@ -22,6 +22,10 @@ angular.module('tutorial', ['ngSanitize', 'ui.ace'])
       it: {
         name: 'Italian',
         img: 'it.png'
+      },
+      ptbr: {
+        name: 'Português',
+        img: 'br.png'
       }
     };
 
